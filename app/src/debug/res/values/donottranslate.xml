@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_app_name" translatable="false">SoundWave Debug</string>
+    <string name="pkg_authority_cover">com.itech.soundwave.debug.image.CoverProvider</string>
+</resources>

@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2025 SoundWave Project
+ * JStringRef.h is part of SoundWave.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+#ifndef SoundWave_JSTRINGREF_H
+#define SoundWave_JSTRINGREF_H
+
+#include <jni.h>
+#include <taglib/tstring.h>
+
+class JStringRef {
+public:
+    JStringRef(JNIEnv *env, jstring jString);
+
+    JStringRef(JNIEnv *env, TagLib::String string);
+
+    ~JStringRef();
+
+    JStringRef(const JStringRef&) = delete;
+
+    JStringRef& operator=(const JStringRef&) = delete;
+
+    TagLib::String copy();
+
+    jstring& operator*();
+
+private:
+    JNIEnv *env;
+    jstring string;
+};
+
+#endif //SoundWave_JSTRINGREF_H

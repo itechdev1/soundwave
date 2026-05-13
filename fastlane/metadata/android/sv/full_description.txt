@@ -1,0 +1,1 @@
+SoundWave är en lokal musikspelare med en snabb och pålitlig UI/UX utan de många oanvändbara egenskaperna hos andra musikspelare.

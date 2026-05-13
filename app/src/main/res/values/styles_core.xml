@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Master parent theme -->
+    <style name="Theme.SoundWave" parent="Theme.Material3Expressive.DynamicColors.DayNight" />
+    <!-- Adds nicer selector attributes not supported on lollipop -->
+    <style name="Theme.SoundWave.V23" parent="Theme.SoundWave" />
+    <!-- Handles edge-to-edge on other styles variants -->
+    <style name="Theme.SoundWave.V27" parent="Theme.SoundWave.V23">
+        <item name="android:statusBarColor">@color/chrome_translucent</item>
+        <item name="android:navigationBarColor">@color/chrome_translucent</item>
+    </style>
+    <!-- Adds fully transparent system bars -->
+    <style name="Theme.SoundWave.V29" parent="Theme.SoundWave.V27" />
+    <!-- Adds an animated splash screen. -->
+    <style name="Theme.SoundWave.V31" parent="Theme.SoundWave.V29" />
+
+    <!-- Base theme -->
+    <style name="Theme.SoundWave.Base" parent="Theme.SoundWave.V31">
+
+        <!-- Material configuration -->
+<!--        <item name="colorOutline">@color/overlay_stroke</item>-->
+        <item name="appBarLayoutStyle">@style/Widget.SoundWave.AppBarLayout</item>
+        <item name="toolbarStyle">@style/Widget.SoundWave.Toolbar</item>
+        <item name="tabStyle">@style/Widget.SoundWave.TabLayout</item>
+        <item name="tabSecondaryStyle">@style/Widget.SoundWave.TabLayout.Secondary</item>
+        <item name="materialButtonStyle">@style/Widget.SoundWave.Button</item>
+        <item name="materialButtonTonalStyle">@style/Widget.SoundWave.Button.TonalButton</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.SoundWave.Button.OutlinedButton</item>
+        <item name="materialButtonElevatedStyle">@style/Widget.SoundWave.Button.ElevatedButton</item>
+        <item name="borderlessButtonStyle">@style/Widget.SoundWave.Button.TextButton</item>
+        <item name="snackbarButtonStyle">@style/Widget.SoundWave.Button.TextButton.Snackbar</item>
+        <item name="materialIconButtonStyle">@style/Widget.SoundWave.Button.Icon.Base</item>
+        <item name="materialIconButtonOutlinedStyle">
+            @style/Widget.Material3Expressive.Button.IconButton.Outlined
+        </item>
+        <item name="materialIconButtonFilledStyle">
+            @style/Widget.Material3Expressive.Button.IconButton.Filled
+        </item>
+        <item name="materialIconButtonFilledTonalStyle">
+            @style/Widget.Material3Expressive.Button.IconButton.Tonal
+        </item>
+        <item name="materialSplitButtonStyle">@style/Widget.SoundWave.SplitButton</item>
+        <item name="materialSplitButtonLeadingFilledStyle">
+            @style/Widget.SoundWave.SplitButton.LeadingButton.Filled
+        </item>
+        <item name="materialSplitButtonLeadingFilledTonalStyle">
+            @style/Widget.SoundWave.SplitButton.LeadingButton.Filled.Tonal
+        </item>
+        <item name="materialSplitButtonIconFilledStyle">
+            @style/Widget.SoundWave.SplitButton.IconButton.Filled
+        </item>
+        <item name="materialSplitButtonIconFilledTonalStyle">
+            @style/Widget.SoundWave.SplitButton.IconButton.Filled.Tonal
+        </item>
+        <item name="materialAlertDialogTheme">@style/Theme.SoundWave.Dialog</item>
+        <item name="sliderStyle">@style/Widget.SoundWave.Slider</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.SoundWave.LinearProgressIndicator</item>
+        <item name="bottomSheetStyle">@style/Widget.SoundWave.BottomSheet</item>
+        <item name="bottomSheetDialogTheme">@style/Widget.SoundWave.BottomSheet.Dialog</item>
+        <item name="bottomSheetDragHandleStyle">@style/Widget.SoundWave.BottomSheet.Handle</item>
+
+        <!-- typography -->
+        <!-- some of it is non-standard because the default material typography isnt actually
+        using emphasized styles when they are supposed to, and it just looks bad. -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.SoundWave.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.SoundWave.DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.SoundWave.DisplaySmall</item>
+        <item name="textAppearanceDisplayLargeEmphasized">@style/TextAppearance.SoundWave.DisplayLarge.Emphasized</item>
+        <item name="textAppearanceDisplayMediumEmphasized">@style/TextAppearance.SoundWave.DisplayMedium.Emphasized</item>
+        <item name="textAppearanceDisplaySmallEmphasized">@style/TextAppearance.SoundWave.DisplaySmall.Emphasized</item>
+
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.SoundWave.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.SoundWave.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.SoundWave.HeadlineSmall</item>
+        <item name="textAppearanceHeadlineLargeEmphasized">@style/TextAppearance.SoundWave.HeadlineLarge.Emphasized</item>
+        <item name="textAppearanceHeadlineMediumEmphasized">@style/TextAppearance.SoundWave.HeadlineMedium.Emphasized</item>
+        <item name="textAppearanceHeadlineSmallEmphasized">@style/TextAppearance.SoundWave.HeadlineSmall.Emphasized</item>
+
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.SoundWave.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.SoundWave.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.SoundWave.TitleSmall</item>
+        <item name="textAppearanceTitleLargeEmphasized">@style/TextAppearance.SoundWave.TitleLarge.Emphasized</item>
+        <item name="textAppearanceTitleMediumEmphasized">@style/TextAppearance.SoundWave.TitleMedium.Emphasized</item>
+        <item name="textAppearanceTitleSmallEmphasized">@style/TextAppearance.SoundWave.TitleSmall.Emphasized</item>
+
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.SoundWave.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.SoundWave.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.SoundWave.LabelSmall</item>
+        <item name="textAppearanceLabelLargeEmphasized">@style/TextAppearance.SoundWave.LabelLarge.Emphasized</item>
+        <item name="textAppearanceLabelMediumEmphasized">@style/TextAppearance.SoundWave.LabelMedium.Emphasized</item>
+        <item name="textAppearanceLabelSmallEmphasized">@style/TextAppearance.SoundWave.LabelSmall.Emphasized</item>
+
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.SoundWave.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.SoundWave.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.SoundWave.BodySmall</item>
+        <item name="textAppearanceBodyLargeEmphasized">@style/TextAppearance.SoundWave.BodyLarge.Emphasized</item>
+        <item name="textAppearanceBodyMediumEmphasized">@style/TextAppearance.SoundWave.BodyMedium.Emphasized</item>
+        <item name="textAppearanceBodySmallEmphasized">@style/TextAppearance.SoundWave.BodySmall.Emphasized</item>
+
+        <!-- Fix dumb default android behavior -->
+        <item name="android:scrollbars">none</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">@color/sel_compat_ripple</item>
+        <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+
+        <!-- Work around hard-coded text highlight colors in the default Material3 theme -->
+        <item name="android:textColorHighlight">@color/overlay_text_highlight</item>
+        <item name="android:textColorHighlightInverse">@color/overlay_text_highlight_inverse</item>
+
+        <item name="preferenceTheme">@style/PreferenceTheme.SoundWave</item>
+        <item name="preferenceStyle">@style/Preference.SoundWave</item>
+        <item name="preferenceCategoryStyle">@style/Preference.SoundWave.PreferenceCategory</item>
+        <item name="dialogPreferenceStyle">@style/Preference.SoundWave.DialogPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SoundWave.SwitchPreferenceCompat
+        </item>
+        <item name="materialButtonGroupStyle">@style/Widget.SoundWave.MaterialButtonGroup</item>
+    </style>
+
+    <!-- Make sure blue is the default style instead of material purple -->
+    <style name="Theme.SoundWave.App" parent="@style/Theme.SoundWave.Blue" />
+
+    <!--
+    Theming widgets is technically possible below Android 12, but I *really* don't care enough
+    to bother with it.
+    -->
+    <style name="Theme.SoundWave.Widget" parent="@style/Theme.SoundWave.Blue" />
+</resources>
